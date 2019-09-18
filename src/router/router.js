@@ -89,7 +89,7 @@ const myRouter=new Router({
 myRouter.beforeEach((to,from,next)=>{
   NProgress.start()
   if (to.path !== '/login' && !store.state.token) {
-     next('/login')
+    //  next('/login')
      NProgress.done() // 结束Progress
   }
   next()
